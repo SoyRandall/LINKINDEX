@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- #region Head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- endregion -->
+
+<!-- #region body -->
+
+<body>
+
+    <input type="text" name="texto" id="texto" placeholder="Randall">
+    <br>
+    <button name="aceptar" id="aceptar">Aceptar</button>
+
+    <script>
+
+        let nombre = "Randall";
+        let edad = 0;
+        const fecha = new Date();
+        const year = fecha.getFullYear();
+        let numeros = [1, 22, 33, 44, 55, 66, 77, 88, 99, 100];
+        let numeros2 = [101, 102, 103, 104];
+
+        // nombre = prompt("Ingresa tu nombre");
+        // edad = prompt("Ingrese año de nacimiento");
+
+        // alert(nombre);
+
+        document.write(nombre," ","<h1>", year - edad,"</h1>","<br><br>");
+        document.write(numeros.length, "<br><br>");
+
+        let numeros3 = numeros.concat(numeros2);
+
+        for (i in numeros) {
+
+            numeros[i] = numeros[i] + 1;
+            document.write(numeros[i],"<br><br>");
+        }
+
+        numeros3.sort((a,b) => b-a);
+        document.write(numeros3);
+
+        let btnaceptar = document.querySelector('#aceptar');
+
+        btnaceptar.addEventListener('click', () => {
+            let texto = document.getElementById("texto");
+            texto.placeholder = "Randall Aguilar Mora";
+        });
+
+    </script>
+
+</body>
+
+<!-- #endregion -->
+
+<!-- #region Scripts -->
+
+<script src="js/prueba.js"></script>
+
+<!-- #endregion -->
+
+</html>
